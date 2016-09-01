@@ -1,0 +1,14 @@
+{
+  "name": "hxnodejs-steam-webapi",
+  "url": "https://github.com/proletariatgames/hxnodejs-steam-webapi",
+  "license": "MIT",
+  "classPath": "src",
+  "tags": ["nodejs", "steam"],
+  "description": "Externs for the steam-webapi NPM module",
+  "releasenote": "Initial release",
+  "version": "0.6.0-alpha",
+  "contributors": ["Proletariat", "lpetre", "danogles", "waneck"],
+  "dependencies": {
+    "hxnodejs": ""
+  }
+}

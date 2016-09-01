@@ -1,0 +1,8 @@
+{
+  "name": "steam-create",
+  "version": "0.0.1",
+  "description": "Steam API gen",
+  "dependencies": {
+    "steam-webapi": ""
+  }
+}

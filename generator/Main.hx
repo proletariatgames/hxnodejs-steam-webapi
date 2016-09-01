@@ -17,7 +17,12 @@ class Main {
 
       var processed = new Map(),
           newTypes = new Map();
-      processed['getSupportedAPIList'] = true;
+      var returnTypes = [
+        "getSupportedAPIList" => "SteamSupportedApiList",
+        "authenticateUserTicket" => "{ params: { vacbanned: Bool, publisherbanned: Bool, steamid: String, result: String, ownersteamid: String }}",
+        "checkAppOwnership" => "{ appownership: { result: String, permanent: Bool, timestamp: String, ownersteamid: String, ownsapp: Bool }}"
+      ];
+      // processed['getSupportedAPIList'] = true;
       steam.getSupportedAPIList({}, function(err, data) {
         var ifaces = data.apilist.interfaces;
         for (iface in ifaces) {
@@ -43,8 +48,8 @@ class Main {
               var type = switch(param.type) {
                 case 'int32': 'Int';
                 case 'uint32': 'UInt';
-                case 'int64': 'Float /* int64 */';
-                case 'uint64': 'Float /* uint64 */';
+                case 'int64': 'String /* int64 */';
+                case 'uint64': 'String /* uint64 */';
                 case 'string': 'String';
                 case 'rawbinary': 'js.node.Buffer';
                 case 'bool': 'Bool';
@@ -71,8 +76,10 @@ class Main {
             if (args != '') {
               args = '\n    $args';
             }
+            var returnType = returnTypes[camelMethodName];
+            if (returnType == null) returnType = 'Dynamic';
             buf.add('function $camelMethodName(args:{ > SteamArgs, $args\n  }, ' +
-                  'callback:Null<Error>->Dynamic->Void):Void;\n\n  ');
+                  'callback:Null<Error>->$returnType->Void):Void;\n\n  ');
           }
         }
 

@@ -25,16 +25,6 @@ extern class Steam {
   function new(args:SteamArgs);
 
   /**
-    version 1 {ISteamWebAPIUtil}
-   **/
-  function getSupportedAPIList(args:{ > SteamArgs,
-    /**
-      access key
-     */
-    @:optional var key(default, null) : String;
-  }, callback:Null<Error>->SteamSupportedApiList->Void):Void;
-
-  /**
     version 1 {ICSGOPlayers_730}
    **/
   function getPlayerProfileCoin(args:{ > SteamArgs,
@@ -46,7 +36,7 @@ extern class Steam {
     /**
       The steam ID
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The coin
      **/
@@ -80,7 +70,7 @@ extern class Steam {
     /**
       The SteamID of the user inventory
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Authentication obtained from the SteamID
      **/
@@ -103,7 +93,7 @@ extern class Steam {
     /**
       The SteamID of the user inventory
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Authentication obtained from the SteamID
      **/
@@ -141,7 +131,7 @@ extern class Steam {
     /**
       The SteamID of the user inventory
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Authentication obtained from the SteamID
      **/
@@ -164,7 +154,7 @@ extern class Steam {
     /**
       The SteamID of the user inventory
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Authentication obtained from the SteamID
      **/
@@ -180,7 +170,7 @@ extern class Steam {
     /**
       ItemID to lock in for the pick
      **/
-     var itemid0(default, null) : Float /* uint64 */;
+     var itemid0(default, null) : String /* uint64 */;
     /**
       PickID to select for the slot
      **/
@@ -188,7 +178,7 @@ extern class Steam {
     /**
       ItemID to lock in for the pick
      **/
-     var itemid1(default, null) : Float /* uint64 */;
+     var itemid1(default, null) : String /* uint64 */;
     /**
       PickID to select for the slot
      **/
@@ -196,7 +186,7 @@ extern class Steam {
     /**
       ItemID to lock in for the pick
      **/
-     var itemid2(default, null) : Float /* uint64 */;
+     var itemid2(default, null) : String /* uint64 */;
     /**
       PickID to select for the slot
      **/
@@ -204,7 +194,7 @@ extern class Steam {
     /**
       ItemID to lock in for the pick
      **/
-     var itemid3(default, null) : Float /* uint64 */;
+     var itemid3(default, null) : String /* uint64 */;
     /**
       PickID to select for the slot
      **/
@@ -212,7 +202,7 @@ extern class Steam {
     /**
       ItemID to lock in for the pick
      **/
-     var itemid4(default, null) : Float /* uint64 */;
+     var itemid4(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -231,7 +221,7 @@ extern class Steam {
     /**
       The SteamID of the user inventory
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Authentication obtained from the SteamID
      **/
@@ -255,7 +245,7 @@ extern class Steam {
     /**
       ItemID to lock in for the pick
      **/
-     var itemid(default, null) : Float /* uint64 */;
+     var itemid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -282,7 +272,7 @@ extern class Steam {
     /**
       An optional filter for a specific match
      **/
-    @:optional  var matchid(default, null) : Float /* uint64 */;
+    @:optional  var matchid(default, null) : String /* uint64 */;
     /**
       An optional filter for a specific series
      **/
@@ -331,7 +321,7 @@ extern class Steam {
     /**
 
      **/
-     var server_steam_id(default, null) : Float /* uint64 */;
+     var server_steam_id(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -361,7 +351,7 @@ extern class Steam {
     /**
       Only show matches of the specified match id
      **/
-    @:optional  var match_id(default, null) : Float /* uint64 */;
+    @:optional  var match_id(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -376,7 +366,7 @@ extern class Steam {
     /**
       Match id
      **/
-     var match_id(default, null) : Float /* uint64 */;
+     var match_id(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -415,7 +405,7 @@ extern class Steam {
     /**
       The minimum match ID to start from
      **/
-    @:optional  var start_at_match_id(default, null) : Float /* uint64 */;
+    @:optional  var start_at_match_id(default, null) : String /* uint64 */;
     /**
       The number of requested matches to return
      **/
@@ -438,7 +428,7 @@ extern class Steam {
     /**
 
      **/
-    @:optional  var start_at_match_seq_num(default, null) : Float /* uint64 */;
+    @:optional  var start_at_match_seq_num(default, null) : String /* uint64 */;
     /**
 
      **/
@@ -476,7 +466,7 @@ extern class Steam {
     /**
 
      **/
-    @:optional  var start_at_team_id(default, null) : Float /* uint64 */;
+    @:optional  var start_at_team_id(default, null) : String /* uint64 */;
     /**
 
      **/
@@ -526,7 +516,7 @@ extern class Steam {
     /**
 
      **/
-    @:optional  var match_id(default, null) : Float /* uint64 */;
+    @:optional  var match_id(default, null) : String /* uint64 */;
     /**
 
      **/
@@ -545,7 +535,7 @@ extern class Steam {
     /**
       64-bit Steam ID of the broadcaster
      **/
-     var broadcaster_steam_id(default, null) : Float /* uint64 */;
+     var broadcaster_steam_id(default, null) : String /* uint64 */;
     /**
       LeagueID to use if we aren't in a lobby
      **/
@@ -587,7 +577,7 @@ extern class Steam {
     /**
       The 64-bit Steam ID
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -606,7 +596,7 @@ extern class Steam {
     /**
       The 64-bit Steam ID
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -745,7 +735,7 @@ extern class Steam {
     /**
       The Steam ID to fetch items for
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -804,7 +794,7 @@ extern class Steam {
     /**
       The Steam ID to fetch items for
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Return items equipped for this class id
      **/
@@ -823,7 +813,7 @@ extern class Steam {
     /**
       The steam ID of the account to operate on
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The command to run on that asset
      **/
@@ -831,7 +821,7 @@ extern class Steam {
     /**
       The context to fetch history for
      **/
-     var contextid(default, null) : Float /* uint64 */;
+     var contextid(default, null) : String /* uint64 */;
     /**
       The arguments that were provided with the command in the first place
      **/
@@ -850,11 +840,11 @@ extern class Steam {
     /**
       The Steam ID to fetch history for
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The context to fetch history for
      **/
-     var contextid(default, null) : Float /* uint64 */;
+     var contextid(default, null) : String /* uint64 */;
     /**
       Start time of the history range to collect
      **/
@@ -877,11 +867,11 @@ extern class Steam {
     /**
       The asset ID to operate on
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The context to fetch history for
      **/
-     var contextid(default, null) : Float /* uint64 */;
+     var contextid(default, null) : String /* uint64 */;
     /**
       A unique 32 bit ID for the support person executing the command
      **/
@@ -900,11 +890,11 @@ extern class Steam {
     /**
       The asset ID to operate on
      **/
-     var assetid(default, null) : Float /* uint64 */;
+     var assetid(default, null) : String /* uint64 */;
     /**
       The context to fetch history for
      **/
-     var contextid(default, null) : Float /* uint64 */;
+     var contextid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1015,7 +1005,7 @@ extern class Steam {
     /**
       minimum report id
      **/
-    @:optional  var reportidmin(default, null) : Float /* uint64 */;
+    @:optional  var reportidmin(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1153,11 +1143,11 @@ extern class Steam {
     /**
       SteamID of user doing the reporting
      **/
-     var steamidActor(default, null) : Float /* uint64 */;
+     var steamidActor(default, null) : String /* uint64 */;
     /**
       SteamID of the entity being accused of abuse
      **/
-     var steamidTarget(default, null) : Float /* uint64 */;
+     var steamidTarget(default, null) : String /* uint64 */;
     /**
       AppID to check for ownership
      **/
@@ -1177,7 +1167,7 @@ extern class Steam {
     /**
       GID of related record (depends on content type)
      **/
-    @:optional  var gid(default, null) : Float /* uint64 */;
+    @:optional  var gid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1207,11 +1197,11 @@ extern class Steam {
     /**
       SteamID of user attempting to initiate a trade
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       SteamID of user that is the target of the trade invitation
      **/
-     var targetid(default, null) : Float /* uint64 */;
+     var targetid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1226,7 +1216,7 @@ extern class Steam {
     /**
       SteamID of the user making a purchase
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The transaction ID
      **/
@@ -1249,11 +1239,11 @@ extern class Steam {
     /**
       Class ID of the nth class.
      **/
-     var classid0(default, null) : Float /* uint64 */;
+     var classid0(default, null) : String /* uint64 */;
     /**
       Instance ID of the nth class.
      **/
-    @:optional  var instanceid0(default, null) : Float /* uint64 */;
+    @:optional  var instanceid0(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1279,7 +1269,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The app to get exported items from.
      **/
@@ -1287,7 +1277,7 @@ extern class Steam {
     /**
       The context in the app to get exported items from.
      **/
-     var contextid(default, null) : Float /* uint64 */;
+     var contextid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1313,7 +1303,7 @@ extern class Steam {
     /**
       SteamID of user making a purchase
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The ID of the first asset the user is buying - there must be at least one
      **/
@@ -1352,11 +1342,11 @@ extern class Steam {
     /**
       SteamID of first user in the trade
      **/
-     var partya(default, null) : Float /* uint64 */;
+     var partya(default, null) : String /* uint64 */;
     /**
       SteamID of second user in the trade
      **/
-     var partyb(default, null) : Float /* uint64 */;
+     var partyb(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1379,7 +1369,7 @@ extern class Steam {
     /**
       game id to get stats for, if not a mod, it's safe to use appid here
      **/
-     var gameid(default, null) : Float /* uint64 */;
+     var gameid(default, null) : String /* uint64 */;
     /**
       appID of the game
      **/
@@ -1468,7 +1458,7 @@ extern class Steam {
     /**
       SteamID used for friend & around user requests
      **/
-    @:optional  var steamid(default, null) : Float /* uint64 */;
+    @:optional  var steamid(default, null) : String /* uint64 */;
     /**
       ID of the leaderboard to view
      **/
@@ -1521,7 +1511,7 @@ extern class Steam {
     /**
       steamID to set the score for
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       the score to set for this user
      **/
@@ -1544,11 +1534,11 @@ extern class Steam {
     /**
       SteamID of user with the agreement
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       ID of agreement
      **/
-     var agreementid(default, null) : Float /* uint64 */;
+     var agreementid(default, null) : String /* uint64 */;
     /**
       AppID of game
      **/
@@ -1567,11 +1557,11 @@ extern class Steam {
     /**
       SteamID of user with the agreement
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       ID of agreement
      **/
-     var agreementid(default, null) : Float /* uint64 */;
+     var agreementid(default, null) : String /* uint64 */;
     /**
       AppID of game
      **/
@@ -1586,7 +1576,7 @@ extern class Steam {
     /**
       3rd party ID for transaction
      **/
-     var orderid(default, null) : Float /* uint64 */;
+     var orderid(default, null) : String /* uint64 */;
     /**
       AppID of game this transaction is for
      **/
@@ -1624,7 +1614,7 @@ extern class Steam {
     /**
       SteamID of user making purchase
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       AppID of game
      **/
@@ -1639,7 +1629,7 @@ extern class Steam {
     /**
       SteamID of user making purchase
      **/
-    @:optional  var steamid(default, null) : Float /* uint64 */;
+    @:optional  var steamid(default, null) : String /* uint64 */;
     /**
       ip address of user in string format (xxx.xxx.xxx.xxx). Only required if usersession=web
      **/
@@ -1654,11 +1644,11 @@ extern class Steam {
     /**
       3rd party ID for transaction
      **/
-     var orderid(default, null) : Float /* uint64 */;
+     var orderid(default, null) : String /* uint64 */;
     /**
       SteamID of user making purchase
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       AppID of game this transaction is for
      **/
@@ -1757,15 +1747,15 @@ extern class Steam {
     /**
       3rd party ID for transaction
      **/
-     var orderid(default, null) : Float /* uint64 */;
+     var orderid(default, null) : String /* uint64 */;
     /**
       SteamID of user with the agreement
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       ID of agreement
      **/
-     var agreementid(default, null) : Float /* uint64 */;
+     var agreementid(default, null) : String /* uint64 */;
     /**
       AppID of game
      **/
@@ -1792,11 +1782,11 @@ extern class Steam {
     /**
       3rd party ID for transaction
      **/
-    @:optional  var orderid(default, null) : Float /* uint64 */;
+    @:optional  var orderid(default, null) : String /* uint64 */;
     /**
       Steam transaction ID
      **/
-    @:optional  var transid(default, null) : Float /* uint64 */;
+    @:optional  var transid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -1807,7 +1797,7 @@ extern class Steam {
     /**
       3rd party ID for transaction
      **/
-     var orderid(default, null) : Float /* uint64 */;
+     var orderid(default, null) : String /* uint64 */;
     /**
       AppID of game this transaction is for
      **/
@@ -1874,7 +1864,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -1921,7 +1911,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -1972,7 +1962,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2019,11 +2009,11 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID relevant to all subsequent tags
      **/
-     var appid(default, null) : Float /* uint64 */;
+     var appid(default, null) : String /* uint64 */;
     /**
       Number of Tags Specified
      **/
@@ -2058,7 +2048,7 @@ extern class Steam {
     /**
       Steam ID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2070,7 +2060,7 @@ extern class Steam {
     /**
       The Published File ID who's vote details are required
      **/
-    @:optional  var publishedfileid(default, null) : Array<Float /* uint64 */>;
+    @:optional  var publishedfileid(default, null) : Array<String /* uint64 */>;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2081,7 +2071,7 @@ extern class Steam {
     /**
       Steam ID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Count of how many items we are querying
      **/
@@ -2089,7 +2079,7 @@ extern class Steam {
     /**
       A Specific Published Item
      **/
-    @:optional  var publishedfileid(default, null) : Array<Float /* uint64 */>;
+    @:optional  var publishedfileid(default, null) : Array<String /* uint64 */>;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2100,7 +2090,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2115,7 +2105,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2138,7 +2128,7 @@ extern class Steam {
     /**
       collection ids to get the details for
      **/
-     var publishedfileids(default, null) : Array<Float /* uint64 */>;
+     var publishedfileids(default, null) : Array<String /* uint64 */>;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2153,7 +2143,7 @@ extern class Steam {
     /**
       published file id to look up
      **/
-     var publishedfileids(default, null) : Array<Float /* uint64 */>;
+     var publishedfileids(default, null) : Array<String /* uint64 */>;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2164,11 +2154,11 @@ extern class Steam {
     /**
       If specified, only returns details if the file is owned by the SteamID specified
      **/
-    @:optional  var steamid(default, null) : Float /* uint64 */;
+    @:optional  var steamid(default, null) : String /* uint64 */;
     /**
       ID of UGC file to get info for
      **/
-     var ugcid(default, null) : Float /* uint64 */;
+     var ugcid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2183,11 +2173,11 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       ID of UGC file whose bits are being fiddled with
      **/
-     var ugcid(default, null) : Float /* uint64 */;
+     var ugcid(default, null) : String /* uint64 */;
     /**
       appID of product to change updating state for
      **/
@@ -2206,7 +2196,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2214,7 +2204,7 @@ extern class Steam {
     /**
       published file id to subscribe to
      **/
-     var publishedfileid(default, null) : Float /* uint64 */;
+     var publishedfileid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2225,7 +2215,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of product
      **/
@@ -2233,7 +2223,7 @@ extern class Steam {
     /**
       published file id to unsubscribe from
      **/
-     var publishedfileid(default, null) : Float /* uint64 */;
+     var publishedfileid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2252,7 +2242,7 @@ extern class Steam {
     /**
       SteamID of the user taking the survey
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Survey identity verification token for the user
      **/
@@ -2275,7 +2265,7 @@ extern class Steam {
     /**
       SteamID of the user taking the survey
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Survey identity verification token for the user
      **/
@@ -2290,12 +2280,12 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       AppID to check for ownership
      **/
      var appid(default, null) : UInt;
-  }, callback:Null<Error>->Dynamic->Void):Void;
+  }, callback:Null<Error>->{ appownership: { result: String, permanent: Bool, timestamp: String, ownersteamid: String, ownsapp: Bool }}->Void):Void;
 
   /**
     version 1 {ISteamUser}
@@ -2305,7 +2295,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Comma-delimited list of appids (max: 100)
      **/
@@ -2320,7 +2310,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       relationship type (ex: friend)
      **/
@@ -2357,7 +2347,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2368,7 +2358,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2379,7 +2369,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       PackageID to grant
      **/
@@ -2421,7 +2411,7 @@ extern class Steam {
     /**
       Should be the users steamid, unencrypted.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Should be a 32 byte random blob of data, which is then encrypted with RSA using the Steam system's public key.  Randomness is important here for security.
      **/
@@ -2445,7 +2435,7 @@ extern class Steam {
       Ticket from GetAuthSessionTicket.
      **/
      var ticket(default, null) : String;
-  }, callback:Null<Error>->Dynamic->Void):Void;
+  }, callback:Null<Error>->{ params: { vacbanned: Bool, publisherbanned: Bool, steamid: String, result: String, ownersteamid: String }}->Void):Void;
 
   /**
     version 1 {ISteamUserOAuth}
@@ -2466,7 +2456,7 @@ extern class Steam {
     /**
       GameID to retrieve the achievement percentages for
      **/
-     var gameid(default, null) : Float /* uint64 */;
+     var gameid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2515,7 +2505,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       AppID to get achievements for
      **/
@@ -2549,7 +2539,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appid of game
      **/
@@ -2564,7 +2554,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appid of game
      **/
@@ -2591,7 +2581,7 @@ extern class Steam {
     /**
       SteamID of user
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       appID of the video
      **/
@@ -2613,6 +2603,12 @@ extern class Steam {
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
+    version 1 {ISteamWebAPIUtil}
+   **/
+  function getSupportedAPIList(args:{ > SteamArgs,
+  }, callback:Null<Error>->SteamSupportedApiList->Void):Void;
+
+  /**
     version 1 {ISteamWebUserPresenceOAuth}
    **/
   function pollStatus(args:{ > SteamArgs,
@@ -2624,7 +2620,7 @@ extern class Steam {
     /**
       UMQ Session ID
      **/
-     var umqid(default, null) : Float /* uint64 */;
+     var umqid(default, null) : String /* uint64 */;
     /**
       Message that was last known to the user
      **/
@@ -2663,7 +2659,7 @@ extern class Steam {
     /**
       the workshop published file id
      **/
-    @:optional  var publishedfileid(default, null) : Array<Float /* uint64 */>;
+    @:optional  var publishedfileid(default, null) : Array<String /* uint64 */>;
     /**
       3rd party ID for item
      **/
@@ -2712,7 +2708,7 @@ extern class Steam {
     /**
       The Steam ID to fetch items for
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The promo ID to grant an item for
      **/
@@ -2731,7 +2727,7 @@ extern class Steam {
     /**
       The Steam ID to fetch items for
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The promo ID to grant an item for
      **/
@@ -2778,7 +2774,7 @@ extern class Steam {
     /**
       The SteamID of the game server to set the memo on
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The memo to set on the new account
      **/
@@ -2793,7 +2789,7 @@ extern class Steam {
     /**
       The SteamID of the game server to reset the login token of
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2804,7 +2800,7 @@ extern class Steam {
     /**
       The SteamID of the game server account to delete
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2815,7 +2811,7 @@ extern class Steam {
     /**
       The SteamID of the game server to get info on
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2834,7 +2830,7 @@ extern class Steam {
    **/
   function setBanStatus(args:{ > SteamArgs,
 
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
      var banned(default, null) : Bool;
      var ban_seconds(default, null) : UInt;
   }, callback:Null<Error>->Dynamic->Void):Void;
@@ -2852,7 +2848,7 @@ extern class Steam {
    **/
   function getServerIPsBySteamID(args:{ > SteamArgs,
 
-     var server_steamids(default, null) : Float /* uint64 */;
+     var server_steamids(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -2861,8 +2857,8 @@ extern class Steam {
   function postGameDataFrame(args:{ > SteamArgs,
 
      var appid(default, null) : UInt;
-     var steamid(default, null) : Float /* uint64 */;
-     var broadcast_id(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
+     var broadcast_id(default, null) : String /* uint64 */;
      var frame_data(default, null) : String;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
@@ -2922,7 +2918,7 @@ extern class Steam {
     /**
       Find all items that reference the given item.
      **/
-     var child_publishedfileid(default, null) : Float /* uint64 */;
+     var child_publishedfileid(default, null) : String /* uint64 */;
     /**
       If query_type is k_PublishedFileQueryType_RankedByTrend, then this is the number of days to get votes for [1,7].
      **/
@@ -2986,7 +2982,7 @@ extern class Steam {
    **/
   function setDeveloperMetadata(args:{ > SteamArgs,
 
-     var publishedfileid(default, null) : Float /* uint64 */;
+     var publishedfileid(default, null) : String /* uint64 */;
      var appid(default, null) : UInt;
      var metadata(default, null) : String;
   }, callback:Null<Error>->Dynamic->Void):Void;
@@ -2996,7 +2992,7 @@ extern class Steam {
    **/
   function updateTags(args:{ > SteamArgs,
 
-     var publishedfileid(default, null) : Float /* uint64 */;
+     var publishedfileid(default, null) : String /* uint64 */;
      var appid(default, null) : UInt;
      var add_tags(default, null) : String;
      var remove_tags(default, null) : String;
@@ -3010,7 +3006,7 @@ extern class Steam {
     /**
       User to clear cache for.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       App to clear cache for.
      **/
@@ -3018,7 +3014,7 @@ extern class Steam {
     /**
       Context to clear cache for.
      **/
-     var contextid(default, null) : Float /* uint64 */;
+     var contextid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3045,7 +3041,7 @@ extern class Steam {
     /**
       The tradeid shown on the previous page of results, or the ID of the first trade if navigating back
      **/
-     var start_after_tradeid(default, null) : Float /* uint64 */;
+     var start_after_tradeid(default, null) : String /* uint64 */;
     /**
       The user wants the previous page of results, so return the previous max_trades trades before the start time and ID
      **/
@@ -3093,7 +3089,7 @@ extern class Steam {
    **/
   function getTradeOffer(args:{ > SteamArgs,
 
-     var tradeofferid(default, null) : Float /* uint64 */;
+     var tradeofferid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3112,7 +3108,7 @@ extern class Steam {
    **/
   function declineTradeOffer(args:{ > SteamArgs,
 
-     var tradeofferid(default, null) : Float /* uint64 */;
+     var tradeofferid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3120,7 +3116,7 @@ extern class Steam {
    **/
   function cancelTradeOffer(args:{ > SteamArgs,
 
-     var tradeofferid(default, null) : Float /* uint64 */;
+     var tradeofferid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3128,7 +3124,7 @@ extern class Steam {
    **/
   function recordOfflinePlaytime(args:{ > SteamArgs,
 
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
      var ticket(default, null) : String;
      var play_sessions(default, null) : Dynamic /* {message} */;
   }, callback:Null<Error>->Dynamic->Void):Void;
@@ -3141,7 +3137,7 @@ extern class Steam {
     /**
       The player we're asking about
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The number of games to return (0/unset: all)
      **/
@@ -3156,7 +3152,7 @@ extern class Steam {
     /**
       The player we're asking about
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       true if we want additional details (name, icon) about each game
      **/
@@ -3179,7 +3175,7 @@ extern class Steam {
     /**
       The player we're asking about
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3190,7 +3186,7 @@ extern class Steam {
     /**
       The player we're asking about
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3201,7 +3197,7 @@ extern class Steam {
     /**
       The player we're asking about
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The badge we're asking about
      **/
@@ -3216,7 +3212,7 @@ extern class Steam {
     /**
       The player we're asking about
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The game player is currently playing
      **/
@@ -3235,7 +3231,7 @@ extern class Steam {
     /**
       Game-specified context value the game can used to associate the session with some object on their backend.
      **/
-     var context(default, null) : Float /* uint64 */;
+     var context(default, null) : String /* uint64 */;
     /**
       The title of the session to be displayed within each user's list of sessions.
      **/
@@ -3247,7 +3243,7 @@ extern class Steam {
     /**
       (Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3258,7 +3254,7 @@ extern class Steam {
     /**
       The sessionid to update.
      **/
-     var sessionid(default, null) : Float /* uint64 */;
+     var sessionid(default, null) : String /* uint64 */;
     /**
       The appid of the session to update.
      **/
@@ -3274,7 +3270,7 @@ extern class Steam {
     /**
       (Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3289,7 +3285,7 @@ extern class Steam {
     /**
       The user whose sessions are to be enumerated.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       (Optional) Boolean determining whether the message for all users should be included. Defaults to false.
      **/
@@ -3320,7 +3316,7 @@ extern class Steam {
     /**
       The steamid to request notifications for.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid to request notifications for.
      **/
@@ -3335,7 +3331,7 @@ extern class Steam {
     /**
       The sessionid to delete.
      **/
-     var sessionid(default, null) : Float /* uint64 */;
+     var sessionid(default, null) : String /* uint64 */;
     /**
       The appid of the session to delete.
      **/
@@ -3343,7 +3339,7 @@ extern class Steam {
     /**
       (Optional) steamid to make the request on behalf of -- if specified, the user must be in the session.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3354,7 +3350,7 @@ extern class Steam {
     /**
       The sessionid to delete.
      **/
-     var sessionid(default, null) : Float /* uint64 */;
+     var sessionid(default, null) : String /* uint64 */;
     /**
       The appid of the session to delete.
      **/
@@ -3367,9 +3363,9 @@ extern class Steam {
   function addItem(args:{ > SteamArgs,
 
      var appid(default, null) : UInt;
-     var itemdefid(default, null) : Float /* uint64 */;
+     var itemdefid(default, null) : String /* uint64 */;
      var itempropsjson(default, null) : String;
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Should notify the user that the item was added to their Steam Inventory.
      **/
@@ -3382,9 +3378,9 @@ extern class Steam {
   function addPromoItem(args:{ > SteamArgs,
 
      var appid(default, null) : UInt;
-     var itemdefid(default, null) : Float /* uint64 */;
+     var itemdefid(default, null) : String /* uint64 */;
      var itempropsjson(default, null) : String;
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Should notify the user that the item was added to their Steam Inventory.
      **/
@@ -3397,10 +3393,10 @@ extern class Steam {
   function exchangeItem(args:{ > SteamArgs,
 
      var appid(default, null) : UInt;
-     var steamid(default, null) : Float /* uint64 */;
-     var materialsitemid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
+     var materialsitemid(default, null) : String /* uint64 */;
      var materialsquantity(default, null) : UInt;
-     var outputitemdefid(default, null) : Float /* uint64 */;
+     var outputitemdefid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3409,7 +3405,7 @@ extern class Steam {
   function getInventory(args:{ > SteamArgs,
 
      var appid(default, null) : UInt;
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3419,8 +3415,8 @@ extern class Steam {
 
      var appid(default, null) : UInt;
      var modifiedsince(default, null) : String;
-     var itemdefids(default, null) : Float /* uint64 */;
-     var workshopids(default, null) : Float /* uint64 */;
+     var itemdefids(default, null) : String /* uint64 */;
+     var workshopids(default, null) : String /* uint64 */;
     /**
       Allow stale data to be returned for the specified number of seconds.
      **/
@@ -3443,7 +3439,7 @@ extern class Steam {
     /**
       The SteamID of the user to check
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3458,7 +3454,7 @@ extern class Steam {
     /**
       The SteamID of the user whose listings should be canceled
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       Whether or not to wait until all listings have been canceled before returning the response
      **/
@@ -3477,7 +3473,7 @@ extern class Steam {
     /**
       The identifier of the listing to get information for
      **/
-     var listingid(default, null) : Float /* uint64 */;
+     var listingid(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3525,7 +3521,7 @@ extern class Steam {
     /**
       steamid of the user who is reported as cheating.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid.
      **/
@@ -3533,11 +3529,11 @@ extern class Steam {
     /**
       (Optional) steamid of the user or game server who is reporting the cheating.
      **/
-     var steamidreporter(default, null) : Float /* uint64 */;
+     var steamidreporter(default, null) : String /* uint64 */;
     /**
       (Optional) App specific data about the cheating.
      **/
-     var appdata(default, null) : Float /* uint64 */;
+     var appdata(default, null) : String /* uint64 */;
     /**
       (Optional) extra information about the source of the cheating - was it a heuristic.
      **/
@@ -3576,7 +3572,7 @@ extern class Steam {
     /**
       steamid of the user who is reported as cheating.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid.
      **/
@@ -3584,7 +3580,7 @@ extern class Steam {
     /**
       The reportid originally used to report cheating.
      **/
-     var reportid(default, null) : Float /* uint64 */;
+     var reportid(default, null) : String /* uint64 */;
     /**
       Text describing cheating infraction.
      **/
@@ -3611,7 +3607,7 @@ extern class Steam {
     /**
       steamid of the user who is reported as cheating.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid.
      **/
@@ -3626,7 +3622,7 @@ extern class Steam {
     /**
       steamid of the user.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid the user is playing.
      **/
@@ -3634,7 +3630,7 @@ extern class Steam {
     /**
       session id
      **/
-     var session_id(default, null) : Float /* uint64 */;
+     var session_id(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3645,7 +3641,7 @@ extern class Steam {
     /**
       steamid of the user.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid the user is playing.
      **/
@@ -3660,7 +3656,7 @@ extern class Steam {
     /**
       steamid of the user.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid the user is playing.
      **/
@@ -3668,7 +3664,7 @@ extern class Steam {
     /**
       session id
      **/
-     var session_id(default, null) : Float /* uint64 */;
+     var session_id(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3679,7 +3675,7 @@ extern class Steam {
     /**
       steamid of the user running and reporting the cheat.
      **/
-     var steamid(default, null) : Float /* uint64 */;
+     var steamid(default, null) : String /* uint64 */;
     /**
       The appid.
      **/
@@ -3695,15 +3691,15 @@ extern class Steam {
     /**
       local system time now.
      **/
-     var time_now(default, null) : Float /* uint64 */;
+     var time_now(default, null) : String /* uint64 */;
     /**
       local system time when cheat process started. ( 0 if not yet run )
      **/
-     var time_started(default, null) : Float /* uint64 */;
+     var time_started(default, null) : String /* uint64 */;
     /**
       local system time when cheat process stopped. ( 0 if still running )
      **/
-     var time_stopped(default, null) : Float /* uint64 */;
+     var time_stopped(default, null) : String /* uint64 */;
     /**
       descriptive name for the cheat.
      **/
@@ -3719,11 +3715,11 @@ extern class Steam {
     /**
       cheat param 1
      **/
-     var cheat_param_1(default, null) : Float /* uint64 */;
+     var cheat_param_1(default, null) : String /* uint64 */;
     /**
       cheat param 2
      **/
-     var cheat_param_2(default, null) : Float /* uint64 */;
+     var cheat_param_2(default, null) : String /* uint64 */;
   }, callback:Null<Error>->Dynamic->Void):Void;
 
   /**
@@ -3789,7 +3785,6 @@ extern class Steam {
      var appid(default, null) : UInt;
      var languages(default, null) : Dynamic /* {message} */;
   }, callback:Null<Error>->Dynamic->Void):Void;
-
 
 }
 

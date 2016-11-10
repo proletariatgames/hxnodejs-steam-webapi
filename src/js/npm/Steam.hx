@@ -2337,7 +2337,24 @@ extern class Steam {
       Comma-delimited list of SteamIDs
      **/
      var steamids(default, null) : String;
-  }, callback:Null<Error>->Dynamic->Void):Void;
+  }, callback:Null<Error>->{
+    players:Array<{
+      var steamid(default, null):String /* uint64 */;
+      var communityvisibilitystate(default, null):Int;
+      var profilestate(default, null):Int;
+      var personaname(default, null):String;
+      var lastlogoff(default, null):Float;
+      var profileurl(default, null):String;
+      var avatar(default, null):String;
+      var avatarmedium(default,null):String;
+      var avatarfull(default,null):String;
+      var personastate(default,null):Int;
+      var realname(default,null):String;
+      var primaryclanid(default,null):String /* uint64 */;
+      var timecreated(default, null):Float;
+      var personastateflags(default, null):Int;
+    }>
+  }->Void):Void;
 
   /**
     version 1 {ISteamUser}

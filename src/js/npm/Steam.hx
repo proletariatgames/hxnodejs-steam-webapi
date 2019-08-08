@@ -1,5 +1,5 @@
 package js.npm;
-import js.Error;
+import js.lib.Error;
 
 @:jsRequire('steam-webapi')
 extern class Steam {

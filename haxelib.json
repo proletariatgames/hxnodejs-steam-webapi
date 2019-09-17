@@ -5,8 +5,8 @@
   "classPath": "src",
   "tags": ["nodejs", "steam"],
   "description": "Externs for the steam-webapi NPM module",
-  "releasenote": "Initial release",
-  "version": "0.6.0-alpha",
+  "releasenote": "Haxe 4 support",
+  "version": "0.6.1",
   "contributors": ["Proletariat", "lpetre", "danogles", "waneck"],
   "dependencies": {
     "hxnodejs": ""

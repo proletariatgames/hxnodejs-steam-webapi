@@ -1,5 +1,9 @@
 package js.npm;
+#if haxe4
 import js.lib.Error;
+#else
+import js.Error;
+#end
 
 @:jsRequire('steam-webapi')
 extern class Steam {

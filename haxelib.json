@@ -6,8 +6,8 @@
   "tags": ["nodejs", "steam"],
   "description": "Externs for the steam-webapi NPM module",
   "releasenote": "Haxe 4 support",
-  "version": "0.6.1",
-  "contributors": ["Proletariat", "lpetre", "danogles", "waneck"],
+  "version": "0.6.2",
+  "contributors": ["Proletariat", "ProletariatDev1"],
   "dependencies": {
     "hxnodejs": ""
   }
